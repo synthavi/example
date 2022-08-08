@@ -1,0 +1,95 @@
+<!DOCTYPE html>
+<html>
+<head>
+<title>index</title>
+<style>
+* {
+  box-sizing: border-box;
+}
+
+.column {
+  float: left;
+  padding: 10px;
+  height: 300px; 
+}
+.column.side {
+  width: 25%;
+}
+
+.column.middle {
+  width: 50%;
+}
+
+.row:after {
+  content: "";
+  display: table;
+  clear: both;
+}
+.time{
+   width :100px;
+   height :100px;
+   padding :4px;
+   margin :8px;
+   background-color :#aaa;
+}
+.img-move {
+  width: 100px;
+  height: 100px;
+  background: url(train.gif);
+  position: relative;
+  animation: myfirst 5s 2;
+  animation-direction: alternate;
+}
+
+@keyframes myfirst {
+  0%   {background: url(train1.gif); left: 0px; top: 0px;}
+  25%  {background: url(train1.gif); left: 200px; top: 0px;}
+  50%  {background: url(train1.gif); left: 200px; top: 200px;}
+  75%  {background: url(train1.gif); left: 0px; top: 200px;}
+  100% {background: url(train1.gif); left: 0px; top: 0px;}
+}
+
+</style>
+<script LANGUAGE="Javascript">
+var name="";
+function hello(){
+name=prompt("Enter Your name:",'Name);
+alert('Greetings'+name+',Welcome to my page!');
+}
+</script>
+
+<script>
+const d = new Date();
+d.setFullYear(2022);
+document.getElementById("date").innerHTML = d;
+</script>
+
+</head>
+<body>
+
+<div class="row">
+  <div class="column side" style="background-color:#DFFFFF;">
+   <A href="https://www.trivago.in"/><img src="trivago.gif"  width="120" height="120"></A>
+   <A href="https://www.mfine.co"><img src="mfine.gif"  width="120" height="120"></A>
+	<A href="https://www.olacabs.com"><img src="ola2.gif"  width="120" height="120"></A>
+    <A href="https://www.railyatri.in" /><img src="train location.gif"  width="120" height="120"></A>	
+  </div>
+  <div class="column middle" style="background-color:#DEF9FF;">
+  <form>
+<input type="Email" value="email">Email</input>
+<input type="password" valu="psswd">Password</input>
+<button type="submit" value="submit">Submit</button>
+</form>
+<div class="img-move"></div> 
+  </div>
+  
+  <div class="column side" style="background-color:#F2FFFF;">
+  <button width="20px" height="10px" onLoad ="hello();">click me! </button>
+  <div id="date" class="time">
+  
+  </div>
+</div>
+
+
+</body>
+</html>
